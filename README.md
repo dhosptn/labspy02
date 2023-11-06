@@ -142,6 +142,11 @@ while i in range(jum):
 
 
 ````
+## OUTPUT
+<img src="perulangan/perulangan2.png" width="500px">
+
+## PENGERJAAN
+<img src="pengerjaan.png" width="500px">
 
 
 
