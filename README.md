@@ -31,6 +31,23 @@ Dengan demikian, program akan menentukan bilangan terbesar di antara ketiga bila
   Hasilnya disimpan dalam variabel random_number.
 - if random_number < 0.5:: Program memeriksa apakah random_number kurang dari 0.5. Jika benar, maka bilangan tersebut akan dicetak.
 - print(random_number): Jika bilangan acak memenuhi kondisi sebelumnya (kurang dari 0.5), maka bilangan tersebut akan dicetak ke layar.
+
+````
+import random
+
+n = int(input("Masukkan nilai n: "))  # Meminta pengguna untuk memasukkan nilai n
+
+count = 0  # Inisialisasi penghitung
+while count < n:
+    random_number = random.random()  # Menghasilkan bilangan acak antara 0 dan 1
+    if random_number < 0.5:
+        print(random_number)
+        count += 1  # Menambahkan 1 ke penghitung
+
+print("Selesai")
+
+
+````
 ## OUTPUT
 <img src="labspy03/labpy03_latihan1.png" width="500px">
 
@@ -55,6 +72,32 @@ Dengan demikian, program akan menentukan bilangan terbesar di antara ketiga bila
   dimasukkan sebelumnya) atau apakah input_number lebih besar dari 
   max_number yang sebelumnya. Jika salah satu kondisi ini terpenuhi, maka 
   max_number akan diubah menjadi input_number.
+
+````
+# Inisialisasi variabel untuk menyimpan bilangan terbesar
+max_number = None
+
+while True:
+    input_number = float(input("Masukkan angka (0 untuk berhenti): "))
+
+    # Cek apakah pengguna memasukkan 0
+    if input_number == 0:
+        break
+
+    # Periksa apakah bilangan saat ini lebih besar dari yang sebelumnya
+    if max_number is None or input_number > max_number:
+        max_number = input_number
+
+if max_number is not None:
+    print("Bilangan terbesar adalah:", max_number)
+else:
+    print("Tidak ada bilangan yang dimasukkan.")
+
+
+
+````
+
+
 ## OUTPUT
 <img src="labspy03/labpy03_latihan2.png" width="500px">
 
@@ -64,6 +107,40 @@ Dengan demikian, program akan menentukan bilangan terbesar di antara ketiga bila
 - total_keuntungan += modal_awal * 0.03: Pada bulan 8, laba 3% dari modal awal ditambahkan ke total_keuntungan.
 - print("Total Keuntungan selama 8 bulan adalah: Rp", total_keuntungan): Ini adalah perintah cetak yang digunakan untuk mencetak hasil perhitungan total keuntungan selama 8 
   bulan ke layar. Pesan ini juga mencantumkan jumlah keuntungan dalam bentuk mata uang (Rupiah).
+
+````
+# Modal awal
+modal_awal = 100000000  # 100 juta
+
+# Inisialisasi total keuntungan
+total_keuntungan = 0
+
+# Bulan 1 dan 2
+total_keuntungan += 0  # Tidak ada laba pada bulan 1
+total_keuntungan += 0  # Tidak ada laba pada bulan 2
+
+# Bulan 3
+total_keuntungan += modal_awal * 0.01  # Laba 1% dari modal awal
+
+# Bulan 4
+total_keuntungan += 0  # Tidak ada peningkatan laba
+
+# Bulan 5
+total_keuntungan += modal_awal * 0.05  # Laba 5% dari modal awal
+
+# Bulan 6 dan 7
+total_keuntungan += 0  # Tidak ada peningkatan laba pada bulan 6 dan 7
+
+# Bulan 8
+total_keuntungan += modal_awal * 0.03  # Laba 3% dari modal awal
+
+# Total keuntungan selama 8 bulan
+print("Total Keuntungan selama 8 bulan adalah: Rp", total_keuntungan)
+
+
+
+
+````
   
 ## OUTPUT
 <img src="labspy03/program1py.png" width="500px">
